@@ -2,7 +2,8 @@ import Logo from '../../assets/images/logo.svg';
 import {Link} from "react-router-dom";
 import HomeIcon from '../../assets/icons/home.svg';
 import NotificationsIcon from '../../assets/icons/notification.svg';
-import AvatarIcon from '../../assets/icons/avatar.svg';
+import Avatar from '../../assets/images/avatars/avatar_1.png';
+import Logout from "../auth/Logout.jsx";
 
 
 const Header = () => {
@@ -26,12 +27,14 @@ const Header = () => {
               <img src={NotificationsIcon} alt="Notification" />
             </button>
 
+            <Logout />
+
             <Link
               to="/me"
               className="flex-center !ml-8 gap-3">
               <span className="text-lg font-medium lg:text-xl">Sumit</span>
               <img className="max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px]"
-                   src={AvatarIcon} alt="avatar" />
+                   src={Avatar} alt="avatar" />
             </Link>
           </div>
         </div>

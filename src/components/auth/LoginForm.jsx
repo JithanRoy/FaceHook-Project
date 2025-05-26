@@ -1,10 +1,13 @@
 import {useForm} from "react-hook-form";
 import Field from "../common/Field.jsx";
 import {useNavigate} from "react-router-dom";
+import {useAuth} from "../../hooks/useAuth.js";
 
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const { setAuth } = useAuth();
+
   const {
     register,
     handleSubmit,
@@ -12,7 +15,9 @@ const LoginForm = () => {
   } = useForm();
 
   const submitForm = (formData) => {
-    console.log(formData);
+    const user = {...formData}
+    console.log(user);
+    setAuth({user});
     navigate('/');
   }
 
@@ -22,7 +27,7 @@ const LoginForm = () => {
         <input
           {...register("email", {required: "Email ID is Required"})}
           className={`auth-input ${
-            !!errors.email ? "border-red-500" : "border-gray-200"
+            errors.email ? "border-red-500" : "border-gray-200"
           }`}
           type="email"
           name="email"
@@ -40,7 +45,7 @@ const LoginForm = () => {
             },
           })}
           className={`auth-input ${
-            !!errors.password ? "border-red-500" : "border-gray-200"
+            errors.password ? "border-red-500" : "border-gray-200"
           }`}
           type="password"
           name="password"

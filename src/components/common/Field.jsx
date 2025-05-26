@@ -15,7 +15,7 @@ const Field = ({label, children, htmlFor, error }) => {
 const getChildId = (children) => {
   const child = React.Children.only(children);
 
-  if ('id' in child?.props) {
+  if ('id' in child.props) {
     return child.props.id;
   }
 }
