@@ -9,10 +9,14 @@ const PrivateRoutes = () => {
     <>
       {
         auth.user ? (
-          <div className='container'>
+          <>
             <Header />
-            <Outlet />
-          </div>
+            <main className="mx-auto max-w-[1020px] py-8">
+              <div className='container'>
+                <Outlet />
+              </div>
+            </main>
+          </>
         ) : (
           <Navigate to='/login' />
         )
