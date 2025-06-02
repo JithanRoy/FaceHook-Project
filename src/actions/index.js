@@ -1,5 +1,3 @@
-
-
 export const actions = {
   profile: {
     DATA_FETCHING: "PROFILE_DATA_FETCHING",

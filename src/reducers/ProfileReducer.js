@@ -1,34 +1,36 @@
-import {actions} from "../actions/index.js";
+import { actions } from "../actions";
 
-
-export const initialState = {
+const initialState = {
   user: null,
   posts: [],
   loading: false,
   error: null,
-}
+};
 
-export const ProfileReducer = (state, action) => {
+const profileReducer = (state, action) => {
   switch (action.type) {
     case actions.profile.DATA_FETCHING: {
       return {
         ...state,
         loading: true,
-      }
+      };
     }
 
     case actions.profile.DATA_FETCHED: {
       return {
         ...state,
         loading: false,
-      }
+        user: action.data.user,
+        posts: action.data.posts,
+      };
     }
 
     case actions.profile.DATA_FETCH_ERROR: {
       return {
         ...state,
+        loading: false,
         error: action.error,
-      }
+      };
     }
 
     case actions.profile.USER_DATA_EDITED: {
@@ -46,13 +48,14 @@ export const ProfileReducer = (state, action) => {
         user: {
           ...state.user,
           avatar: action.data.avatar,
-        },
-      };
+        }
+      }
     }
 
     default: {
       return state;
     }
   }
-}
+};
 
+export { initialState, profileReducer };
