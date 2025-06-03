@@ -9,7 +9,7 @@ const LoginPage = () => {
       <main className="flex min-h-screen items-center justify-center bg-deepDark py-8">
         <div className="max-w-[1368px] flex-1">
           <div className="container grid items-center gap-8 lg:grid-cols-2">
-            <div>
+            <div className='flex flex-col items-center justify-center'>
               <img
                 className="mb-12 max-w-full max-lg:hidden"
                 src={AuthIllustration}

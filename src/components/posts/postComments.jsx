@@ -1,8 +1,14 @@
 import { useAvatar } from "../../hooks/useAvatar";
 import PostCommentList from "./postCommentList.jsx";
+import {useState} from "react";
 
 const PostComments = ({ post }) => {
+  const [showComment, setShowComment] = useState(false);
   const { avatarURL } = useAvatar(post);
+
+  const handleShowComment = () => {
+    setShowComment(!showComment);
+  }
 
   return (
     <div>
@@ -24,12 +30,12 @@ const PostComments = ({ post }) => {
         </div>
       </div>
       <div className="mt-4">
-        <button className="text-gray-300 max-md:text-sm">
+        <button onClick={handleShowComment} className="text-gray-300 max-md:text-sm">
           All Comment ▾
         </button>
       </div>
 
-      <PostCommentList comments={post?.comments} />
+      {showComment && <div className="mt-4"><PostCommentList comments={post?.comments} /></div>}
     </div>
   );
 };
