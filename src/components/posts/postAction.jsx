@@ -5,6 +5,7 @@ import LikeIcon from "../../assets/icons/like.svg";
 import ShareIcon from "../../assets/icons/share.svg";
 import { useAuth } from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
+
 const PostAction = ({ post, commentCount }) => {
   const { auth } = useAuth();
   const [liked, setLiked] = useState(post?.likes?.includes(auth?.user?.id));
@@ -13,7 +14,7 @@ const PostAction = ({ post, commentCount }) => {
   const handleLike = async () => {
     try {
       const response = await api.patch(
-        `${import.meta.env.VITE_SERVER_BASE_URL}/posts/${post.id}/like`
+        `${import.meta.env.VITE_SERVER_BASE_URL}/posts/${post?.id}/like`
       );
 
       if (response.status === 200) {
