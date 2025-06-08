@@ -493,6 +493,76 @@
       "comments": [],
       "likes": [],
       "createAt": "2024-02-25T07:16:53.349Z"
+    },
+    {
+      "id": "ba6fe906-8a45-4625-91ad-526c18c9a803",
+      "content": "Sharing my post with everyone. ",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "name": "Saad Hasan",
+        "avatar": "uploads/avatar/avatar-1748866320179-361254787.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2025-06-08T07:41:05.759Z"
+    },
+    {
+      "id": "12cc2665-f57c-4371-ae3c-e30ef4cb8c62",
+      "content": "Sharing my thoughts........",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "name": "Saad Hasan",
+        "avatar": "uploads/avatar/avatar-1748866320179-361254787.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2025-06-08T09:12:28.951Z"
+    },
+    {
+      "id": "ae6ccc83-0251-4fcf-a73d-2a0b5f1eff4c",
+      "content": "HI!!!",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "name": "Saad Hasan",
+        "avatar": "uploads/avatar/avatar-1748866320179-361254787.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2025-06-08T11:29:33.110Z"
+    },
+    {
+      "id": "a0d2161a-e195-4529-b09e-b081f91e4dea",
+      "content": "Hi!!! How are you!!",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "name": "Saad Hasan",
+        "avatar": "uploads/avatar/avatar-1748866320179-361254787.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2025-06-08T11:29:59.334Z"
+    },
+    {
+      "id": "a2f84687-b2b1-4cfa-b25c-5f76e330c363",
+      "content": "Sharing my thoughts about.....",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "name": "Saad Hasan",
+        "avatar": "uploads/avatar/avatar-1748866320179-361254787.jpg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2025-06-08T11:34:06.721Z"
     }
   ],
   "comments": [],

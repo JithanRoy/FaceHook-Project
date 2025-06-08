@@ -1,13 +1,12 @@
-import React, {useEffect, useReducer} from 'react'
-import {useAuth} from "../hooks/useAuth.js";
-import {initialState, postReducer} from "../reducers/postReducer.js";
+import React, {useEffect} from 'react'
 import useAxios from "../hooks/useAxios.js";
 import PostList from "../components/posts/postList.jsx";
 import {actions} from "../actions/index.js";
+import {usePost} from "../hooks/usePost.js";
+import NewPost from "../components/posts/NewPost.jsx";
 
 const HomePage = () => {
-  const {auth} = useAuth();
-  const [state, dispatch] = useReducer(postReducer, initialState);
+  const { state, dispatch } = usePost();
   const {api} = useAxios();
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const HomePage = () => {
         if (response.status === 200) {
           dispatch({
             type: actions.post.DATA_FETCHED,
-            data: response.data,
+            data: response.data.reverse(),
           });
         }
       } catch (error) {
@@ -43,6 +42,7 @@ const HomePage = () => {
 
   return (
     <>
+      <NewPost />
       <PostList posts={state?.posts}/>
     </>
   )
